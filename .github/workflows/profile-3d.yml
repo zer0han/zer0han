@@ -2,47 +2,23 @@ name: GitHub-Profile-3D-Contrib
 
 on:
   schedule:
-    - cron: "0 18 * * *"
+    - cron: "0 18 * * *" # Runs every day at 18:00 UTC
   workflow_dispatch:
-  push:
-    branches: ["master", "main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    name: generate-github-profile-3d-contrib
     steps:
-      - uses: actions/checkout@v4
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.2
+      - uses: actions/checkout@v3
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-        with:
-          SETTING_JSON: |
-            {
-              "type": "normal",
-              "backgroundColor": "#0d1117",
-              "foregroundColor": "#c9d1d9",
-              "strongColor": "#58a6ff",
-              "weakColor": "#30363d",
-              "radarColor": "#BAE1FF",
-              "growingAnimation": true,
-              "contribColors": [
-                "#FFE5B4",
-                "#FFB3BA",
-                "#BAE1FF",
-                "#BAFFC9",
-                "#E0BBE4",
-                "#FFDFD3"
-              ],
-              "userInfoColor": "#c9d1d9",
-              "footerText": "My 3D Journey"
-            }
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -A .
-          git diff --quiet && git diff --staged --quiet || git commit -m "generated"
+          git commit -m "Generated 3D Profile" || exit 0
           git push
