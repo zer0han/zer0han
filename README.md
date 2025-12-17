@@ -21,5 +21,5 @@ Here are some ideas to get you started:
 </picture>
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zer0han&layout=compact&theme=radical&hide_border=true" />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zer0han&layout=donut&theme=tokyonight" alt="Top Langs" />
