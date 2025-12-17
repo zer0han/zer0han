@@ -1,12 +1,4 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00FF41&height=200&section=header&text=NEO...%20FOLLOW%20THE%20WHITE%20RABBIT&fontSize=40&fontAlignY=40&animation=twinkling&theme=dark" />
-</p>
-<p align="center">
-<img src="https://img.shields.io/badge/System-Active-00FF41?style=for-the-badge&logo=ghostery&logoColor=00FF41&labelColor=000000" />
-<img src="https://img.shields.io/badge/Language-Python-00FF41?style=for-the-badge&logo=python&logoColor=00FF41&labelColor=000000" />
-<img src="https://img.shields.io/badge/Status-Infiltrating-00FF41?style=for-the-badge&logo=hackthebox&logoColor=00FF41&labelColor=000000" />
-</p>
-## Hi there 👋
+##Hi there 👋
 
 <!--
 **zer0han/zer0han** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
