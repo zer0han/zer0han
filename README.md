@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=000000&height=150&section=header&text=FOLLOW%20THE%20WHITE%20RABBIT&fontSize=40&fontColor=00FF41&animation=twinkling" />
-</p>
-
 <!--
 **zer0han/zer0han** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
