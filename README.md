@@ -1,3 +1,11 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00FF41&height=200&section=header&text=NEO...%20FOLLOW%20THE%20WHITE%20RABBIT&fontSize=40&fontAlignY=40&animation=twinkling&theme=dark" />
+</p>
+<p align="center">
+<img src="https://img.shields.io/badge/System-Active-00FF41?style=for-the-badge&logo=ghostery&logoColor=00FF41&labelColor=000000" />
+<img src="https://img.shields.io/badge/Language-Python-00FF41?style=for-the-badge&logo=python&logoColor=00FF41&labelColor=000000" />
+<img src="https://img.shields.io/badge/Status-Infiltrating-00FF41?style=for-the-badge&logo=hackthebox&logoColor=00FF41&labelColor=000000" />
+</p>
 ## Hi there 👋
 
 <!--
@@ -14,6 +22,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zer0han&layout=compact&bg_color=000000&title_color=00FF41&text_color=00FF41&icon_color=00FF41&hide_border=true" />
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zer0han/zer0han/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zer0han/zer0han/output/github-contribution-grid-snake.svg">
