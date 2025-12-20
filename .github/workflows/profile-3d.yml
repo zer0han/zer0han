@@ -1,73 +1,25 @@
-# name: GitHub-Profile-3D-Contrib
-
-# on:
-#   schedule:
-#     - cron: "0 18 * * *" # Runs every day at 18:00 UTC
-#   workflow_dispatch:
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     name: generate-github-profile-3d-contrib
-#     steps:
-#       - uses: actions/checkout@v3
-#       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#           USERNAME: ${{ github.repository_owner }}
-#       - name: Commit & Push
-#         run: |
-#           git config user.name github-actions
-#           git config user.email github-actions@github.com
-#           git add -A .
-#           git commit -m "Generated 3D Profile" || exit 0
-#           git push
-
 name: GitHub-Profile-3D-Contrib
 
 on:
   schedule:
-    - cron: "0 18 * * *"
+    - cron: "0 18 * * *" # Runs every day at 18:00 UTC
   workflow_dispatch:
-  push:
-    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    name: generate-github-profile-3d-contrib
     steps:
-      - uses: actions/checkout@v4
-      - uses: yoshi389111/github-profile-3d-contrib@0.9.1
+      - uses: actions/checkout@v3
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-        with:
-          SETTING_JSON: |
-            {
-              "type": "normal",
-              "backgroundColor": "#000000",
-              "foregroundColor": "#00FF41",
-              "strongColor": "#00FF41",
-              "weakColor": "#003B00",
-              "radarColor": "#00FF41",
-              "growingAnimation": true,
-              "contribColors": [
-                "#003B00",
-                "#008F11",
-                "#00FF41",
-                "#0D0208",
-                "#003B00",
-                "#00FF41"
-              ],
-              "userInfoColor": "#00FF41",
-              "footerText": "SYSTEM STATUS: ACTIVE"
-            }
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -A .
-          git diff --quiet && git diff --staged --quiet || git commit -m "Generated Matrix 3D Profile"
+          git commit -m "Generated 3D Profile" || exit 0
           git push
+
