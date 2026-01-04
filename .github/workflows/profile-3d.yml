@@ -19,7 +19,7 @@ jobs:
           # Using | instead of > ensures the JSON is read as a literal string
           SETTING_JSON: |
             {
-              "type": "season",
+              "type": "gitblock",
               "backgroundColor": "#0d1117",
               "foregroundColor": "#c9d1d9",
               "userInfoColor": "#58a6ff"
