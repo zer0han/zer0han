@@ -20,4 +20,4 @@ Hello world
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/zer0han/zerohan/output/github-contribution-grid-snake.svg">
 </picture>
 
-![](./profile-3d-contrib/profile-night-season.svg)
+![](./profile-3d-contrib/profile-gitblock.svg)
