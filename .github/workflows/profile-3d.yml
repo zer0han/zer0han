@@ -42,8 +42,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          # The key is to provide the JSON string directly here
-          SETTING_JSON: '{"type":"season","backgroundColor":"#0d1117","foregroundColor":"#c9d1d9","userInfoColor":"#58a6ff"}'
+          SETTING_JSON: |
+            {
+              "type": "gitblock",
+              "backgroundColor": "#0d1117",
+              "foregroundColor": "#c9d1d9",
+              "strongColor": "#58a6ff",
+              "weakColor": "#161b22",
+              "radarColor": "#58a6ff",
+              "userInfoColor": "#58a6ff",
+              "contribColors": [
+                "#161b22",
+                "#00442a",
+                "#006d32",
+                "#26a641",
+                "#39d353",
+                "#58a6ff"
+              ]
+            }
       - name: Commit & Push
         run: |
           git config user.name github-actions
