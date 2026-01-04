@@ -1,16 +1,13 @@
 name: GitHub-Profile-3D-Contrib
-
 on:
   schedule:
     - cron: "0 18 * * *"
   workflow_dispatch:
   push:
     branches: ["main", "master"]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: generate-github-profile-3d-contrib
     permissions:
       contents: write
     steps:
@@ -22,31 +19,18 @@ jobs:
         with:
           SETTING_JSON: |
             {
-              "type": "gitblock",
-              "backgroundColor": "#000000",
-              "foregroundColor": "#00FF41",
-              "strongColor": "#00FF41",
-              "weakColor": "#003B00",
-              "radarColor": "#00FF41",
-              "growingAnimation": true,
-              "contribColors": [
-                "#003B00",
-                "#008F11",
-                "#00FF41",
-                "#ADFF2F",
-                "#215E21",
-                "#00FF41"
-              ],
-              "userInfoColor": "#00FF41"
+              "type": "season",
+              "backgroundColor": "#0d1117",
+              "foregroundColor": "#c9d1d9",
+              "userInfoColor": "#58a6ff"
             }
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -A .
-          git diff --quiet && git diff --staged --quiet || git commit -m "Generated Dark Blocks"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Generated Dark Season"
           git push
-
 
 #name: GitHub-Profile-3D-Contrib
 
