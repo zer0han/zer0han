@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches: ["main", "master"]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,11 +14,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: yoshi389111/github-profile-3d-contrib@0.7.2
+        with:
+          SETTING_JSON: |
+            {
+              "type": "gitblock",
+              "backgroundColor": "#0d1117",
+              "foregroundColor": "#c9d1d9",
+              "userInfoColor": "#58a6ff"
+            }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          # This single-line format prevents the ENOENT file error
-          SETTING_JSON: '{"type":"gitblock","backgroundColor":"#0d1117","foregroundColor":"#c9d1d9","userInfoColor":"#58a6ff"}'
       - name: Commit & Push
         run: |
           git config user.name github-actions
