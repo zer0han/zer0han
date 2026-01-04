@@ -12,7 +12,8 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zer0han&layout=compact&bg_color=000000&title_color=00FF41&text_color=00FF41&icon_color=00FF41&hide_border=true" />
+Hello world
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zer0han/zer0han/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zer0han/zer0han/output/github-contribution-grid-snake.svg">
