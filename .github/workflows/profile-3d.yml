@@ -1,36 +1,3 @@
-name: GitHub-Profile-3D-Contrib
-on:
-  schedule:
-    - cron: "0 18 * * *"
-  workflow_dispatch:
-  push:
-    branches: ["main", "master"]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-          # Using | instead of > ensures the JSON is read as a literal string
-          SETTING_JSON: |
-            {
-              "type": "gitblock",
-              "backgroundColor": "#0d1117",
-              "foregroundColor": "#c9d1d9",
-              "userInfoColor": "#58a6ff"
-            }
-      - name: Commit & Push
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add -A .
-          git diff --quiet && git diff --staged --quiet || git commit -m "Generated Dark Season"
-          git push
 
 #name: GitHub-Profile-3D-Contrib
 
@@ -57,3 +24,30 @@ jobs:
 #           git commit -m "Generated 3D Profile" || exit 0
 #           git push
 
+name: GitHub-Profile-3D-Contrib
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+  push:
+    branches: ["main", "master"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          # The key is to provide the JSON string directly here
+          SETTING_JSON: '{"type":"season","backgroundColor":"#0d1117","foregroundColor":"#c9d1d9","userInfoColor":"#58a6ff"}'
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Generated Dark Season"
+          git push
