@@ -16,8 +16,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-        with:
-          SETTING_JSON: |
+          # SETTING_JSON must be in the env section to work correctly
+          SETTING_JSON: >
             {
               "type": "season",
               "backgroundColor": "#0d1117",
@@ -31,7 +31,7 @@ jobs:
           git add -A .
           git diff --quiet && git diff --staged --quiet || git commit -m "Generated Dark Season"
           git push
-
+          
 #name: GitHub-Profile-3D-Contrib
 
 # on:
