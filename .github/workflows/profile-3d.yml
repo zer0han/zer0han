@@ -14,17 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: yoshi389111/github-profile-3d-contrib@0.7.2
-        with:
-          SETTING_JSON: |
-            {
-              "type": "gitblock",
-              "backgroundColor": "#0d1117",
-              "foregroundColor": "#c9d1d9",
-              "userInfoColor": "#58a6ff"
-            }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          # Pointing to the filename avoids the JSON parsing errors
+          SETTING_JSON: "profile-3d-settings.json"
       - name: Commit & Push
         run: |
           git config user.name github-actions
