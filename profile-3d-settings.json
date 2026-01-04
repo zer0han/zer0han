@@ -1,6 +1,17 @@
 {
   "type": "gitblock",
   "backgroundColor": "#0d1117",
-  "foregroundColor": "#c9d1d9",
-  "userInfoColor": "#58a6ff"
+  "foregroundColor": "#ffffff",
+  "strongColor": "#58a6ff",
+  "weakColor": "#161b22",
+  "radarColor": "#58a6ff",
+  "userInfoColor": "#58a6ff",
+  "contribColors": [
+    "#161b22",
+    "#0e4429",
+    "#006d32",
+    "#26a641",
+    "#39d353",
+    "#58a6ff"
+  ]
 }
