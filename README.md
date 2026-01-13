@@ -14,6 +14,8 @@ Here are some ideas to get you started:
 -->
 Hello world
 
+![zer0han's GitHub Banner](https://raw.githubusercontent.com/zer0han/zer0han/main/banner.png)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zer0han/zer0han/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zer0han/zer0han/output/github-contribution-grid-snake.svg">
